@@ -49,17 +49,16 @@ npm start
 
 All configuration is done via environment variables in the `.env` file:
 
-| Variable                | Description                          | Default     |
-| ----------------------- | ------------------------------------ | ----------- |
-| `LISTEN_HOST`           | Proxy listening address              | `0.0.0.0`   |
-| `LISTEN_PORT`           | Proxy listening port                 | `25565`     |
-| `BACKEND_HOST`          | Minecraft server IP                  | `127.0.0.1` |
-| `BACKEND_PORT`          | Minecraft server port                | `25566`     |
-| `PTERO_PANEL`           | Pterodactyl Panel URL                | Required    |
-| `PTERO_SERVER_ID`       | Pterodactyl Server ID                | Required    |
-| `PTERO_API_KEY`         | Pterodactyl Client API Key           | Required    |
-| `START_COOLDOWN_MS`     | Cooldown between start attempts (ms) | `15000`     |
-| `IDLE_SHUTDOWN_MINUTES` | Minutes before auto-shutdown         | `20`        |
+| Variable                | Description                  | Default     |
+| ----------------------- | ---------------------------- | ----------- |
+| `LISTEN_HOST`           | Proxy listening address      | `0.0.0.0`   |
+| `LISTEN_PORT`           | Proxy listening port         | `25565`     |
+| `BACKEND_HOST`          | Minecraft server IP          | `127.0.0.1` |
+| `BACKEND_PORT`          | Minecraft server port        | `25566`     |
+| `PTERO_PANEL`           | Pterodactyl Panel URL        | Required    |
+| `PTERO_SERVER_ID`       | Pterodactyl Server ID        | Required    |
+| `PTERO_API_KEY`         | Pterodactyl Client API Key   | Required    |
+| `IDLE_SHUTDOWN_MINUTES` | Minutes before auto-shutdown | `20`        |
 
 ### Getting Your Pterodactyl API Key
 
