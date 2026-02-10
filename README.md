@@ -7,7 +7,6 @@ A smart proxy server that automatically wakes up your Minecraft server when play
 - 🔌 **Wake-on-Join**: Automatically starts your Pterodactyl-hosted Minecraft server when players connect
 - 💤 **Auto-Shutdown**: Stops the server after configurable idle time (default: 20 minutes)
 - 📊 **Custom MOTD**: Shows different status messages based on server state (sleeping/starting/running)
-- 🖼️ **Custom Server Icon**: Display a custom favicon when the server is offline
 - 🔄 **Transparent Proxy**: Raw TCP proxy when server is running - no protocol interference
 - 🛡️ **Rate Limiting**: Prevents spam-starting with configurable cooldown
 
@@ -51,7 +50,6 @@ All configuration is done via environment variables in the `.env` file:
 
 | Variable                | Description                  | Default     |
 | ----------------------- | ---------------------------- | ----------- |
-| `LISTEN_HOST`           | Proxy listening address      | `0.0.0.0`   |
 | `LISTEN_PORT`           | Proxy listening port         | `25565`     |
 | `BACKEND_HOST`          | Minecraft server IP          | `127.0.0.1` |
 | `BACKEND_PORT`          | Minecraft server port        | `25566`     |
@@ -76,11 +74,9 @@ minecraft-wake/
 ├── server1/
 │   ├── .env
 │   ├── docker-compose.yml
-│   └── server-icon.png
 └── server2/
     ├── .env
     ├── docker-compose.yml
-    └── server-icon.png
 ```
 
 Update `LISTEN_PORT` in each `.env` to use different ports (25565, 25566, etc.)
@@ -112,7 +108,7 @@ docker-compose up -d --build
 
 ## Server States
 
-- **Sleeping (offline)**: Shows moon emoji 💤, displays custom icon
+- **Sleeping (offline)**: Shows moon emoji 💤
 - **Waking (starting)**: Shows hourglass, tells players to reconnect
 - **Awake (running)**: Transparent proxy, normal gameplay
 - **Auto-shutdown**: Stops after idle timeout, returns to sleeping
