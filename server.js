@@ -18,16 +18,7 @@ for (const k of REQUIRED) {
   }
 }
 
-const {
-  LISTEN_HOST = "0.0.0.0",
-  LISTEN_PORT = "25565",
-  BACKEND_HOST = "127.0.0.1",
-  BACKEND_PORT = "25566",
-  PTERO_PANEL,
-  PTERO_SERVER_ID,
-  PTERO_API_KEY,
-  IDLE_SHUTDOWN_MINUTES = "20",
-} = process.env
+const { LISTEN_PORT = "25565", BACKEND_HOST = "127.0.0.1", BACKEND_PORT = "25566", PTERO_PANEL, PTERO_SERVER_ID, PTERO_API_KEY, IDLE_SHUTDOWN_MINUTES = "20" } = process.env
 
 /* =========================
    LOAD SERVER ICON
@@ -309,7 +300,7 @@ const server = net.createServer(async (clientSocket) => {
   }
 })
 
-server.listen(Number(LISTEN_PORT), LISTEN_HOST, () => {
-  console.log(`🚪 Gate listening on ${LISTEN_HOST}:${LISTEN_PORT}`)
+server.listen(Number(LISTEN_PORT), () => {
+  console.log(`🚪 Gate listening on localhost:${LISTEN_PORT}`)
   console.log(`🎮 Backend at ${BACKEND_HOST}:${BACKEND_PORT}`)
 })
